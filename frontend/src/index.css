@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans bg-brandSand text-slate-900;
+}
+
+a {
+  @apply text-primary;
+}
+
+button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
