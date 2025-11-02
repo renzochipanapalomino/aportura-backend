@@ -55,8 +55,9 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const { data } = await api.post('/api/auth/login', {
-        correo: credentials.email,
+        correo: credentials.email.trim(),
         ['contraseña']: credentials.password,
+        contrasena: credentials.password,
       });
       setToken(data.token);
       const payload = decodeTokenPayload(data.token);
@@ -71,7 +72,11 @@ export const AuthProvider = ({ children }) => {
       return { success: true };
     } catch (error) {
       console.error(error);
-      const message = error.response?.data?.mensaje || 'Error al iniciar sesión';
+      const message =
+        error.response?.data?.mensaje ||
+        error.response?.data?.message ||
+        error.message ||
+        'Error al iniciar sesión';
       return { success: false, message };
     } finally {
       setLoading(false);
@@ -82,14 +87,20 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     try {
       const { data } = await api.post('/api/auth/register', {
-        nombre: payload.name,
-        correo: payload.email,
+        nombre: payload.name.trim(),
+        correo: payload.email.trim(),
         ['contraseña']: payload.password,
+        contrasena: payload.password,
       });
-      return { success: true, data };
+      const message = data?.mensaje || 'Usuario registrado exitosamente ✅';
+      return { success: true, data, message };
     } catch (error) {
       console.error(error);
-      const message = error.response?.data?.mensaje || 'Error al registrar usuario';
+      const message =
+        error.response?.data?.mensaje ||
+        error.response?.data?.message ||
+        error.message ||
+        'Error al registrar usuario';
       return { success: false, message };
     } finally {
       setLoading(false);

@@ -22,7 +22,7 @@ const Register = () => {
     if (!result.success) {
       setError(result.message);
     } else {
-      setSuccess('Registro exitoso. Ahora puedes iniciar sesión.');
+      setSuccess(result.message || 'Registro exitoso. Ahora puedes iniciar sesión.');
       setTimeout(() => navigate('/login'), 1500);
     }
   };
