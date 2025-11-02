@@ -17,31 +17,31 @@ api.interceptors.request.use((config) => {
 });
 
 export const fetchCourses = async () => {
-  const { data } = await api.get('/api/courses');
+  const { data } = await api.get('/api/cursos');
   return data;
 };
 
 export const fetchCourseById = async (id) => {
-  const { data } = await api.get(`/api/courses/${id}`);
+  const { data } = await api.get(`/api/cursos/${id}`);
   return data;
 };
 
 export const createCourse = async (payload) => {
-  const { data } = await api.post('/api/courses', payload);
+  const { data } = await api.post('/api/cursos', payload);
   return data;
 };
 
 export const updateCourse = async (id, payload) => {
-  const { data } = await api.put(`/api/courses/${id}`, payload);
+  const { data } = await api.put(`/api/cursos/${id}`, payload);
   return data;
 };
 
 export const deleteCourse = async (id) => {
-  const { data } = await api.delete(`/api/courses/${id}`);
+  const { data } = await api.delete(`/api/cursos/${id}`);
   return data;
 };
 
 export const fetchProfile = async () => {
-  const { data } = await api.get('/api/users/me');
+  const { data } = await api.get('/api/auth/perfil');
   return data;
 };
