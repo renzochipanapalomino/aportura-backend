@@ -22,8 +22,8 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) =>
               `px-4 py-2 rounded-lg transition-all ${
-                isActive 
-                  ? 'bg-primary text-white shadow-lg shadow-primary/30' 
+                isActive
+                  ? 'bg-primary text-white shadow-lg shadow-primary/30'
                   : 'bg-white text-slate-600 hover:bg-primary/10 hover:text-primary border border-slate-200'
               }`
             }
@@ -31,10 +31,22 @@ const Navbar = () => {
             Inicio
           </NavLink>
           <NavLink
+            to="/sobre-nosotros"
+            className={({ isActive }) =>
+              `px-4 py-2 rounded-lg transition-all ${
+                isActive
+                  ? 'bg-primary text-white shadow-lg shadow-primary/30'
+                  : 'bg-white text-slate-600 hover:bg-primary/10 hover:text-primary border border-slate-200'
+              }`
+            }
+          >
+            Nosotros
+          </NavLink>
+          <NavLink
             to="/cursos"
             className={({ isActive }) =>
               `px-4 py-2 rounded-lg transition-all ${
-                isActive 
+                isActive
                   ? 'bg-primary text-white shadow-lg shadow-primary/30' 
                   : 'bg-white text-slate-600 hover:bg-primary/10 hover:text-primary border border-slate-200'
               }`
