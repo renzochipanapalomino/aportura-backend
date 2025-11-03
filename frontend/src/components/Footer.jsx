@@ -14,7 +14,7 @@ const Footer = () => (
           </p>
         </div>
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wide text-white/80">Enlaces</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-wide text-white/80">Redes Sociales</h4>
 
           <ul className="mt-3 space-y-2 text-sm">
             <li>
@@ -46,23 +46,33 @@ const Footer = () => (
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wide text-white/80">Contacto</h4>
-          <p className="mt-3 text-sm text-white/80 flex items-center gap-2">
-            <FaLocationDot className="text-lg" />
-            Arequipa, Mariano Melgar - Perú
-          </p>
-          <p className="text-sm text-white/80 flex items-center gap-2 mt-2">
-            <MdEmail className="text-lg" />
-            <a href="mailto:aproturaaqp.peru@gmail.com" className="hover:text-white hover:underline">
-              aproturaaqp.peru@gmail.com
+          <h4 className="text-xl font-bold uppercase tracking-wide text-white mb-6">CONTACTO</h4>
+          <div className="space-y-5">
+            <a className="flex items-center gap-3 text-white group cursor-pointer">
+              <div className="bg-white/10 p-2 rounded-full group-hover:bg-white/20 transition-colors">
+                <FaLocationDot className="text-2xl text-white" />
+              </div>
+              <span className="text-base font-medium">Arequipa, Mariano Melgar - Perú</span>
             </a>
-          </p>
-          <p className="text-sm text-white/80 flex items-center gap-2 mt-2">
-            <BsTelephone className="text-lg" />
-            <a href="tel:+51951936792" className="hover:text-white hover:underline">
-              (+51) 951 936 792
+            <a href="mailto:aproturaaqp.peru@gmail.com" 
+               className="flex items-center gap-3 text-white group">
+              <div className="bg-white/10 p-2 rounded-full group-hover:bg-white/20 transition-colors">
+                <MdEmail className="text-2xl text-white" />
+              </div>
+              <span className="text-base font-medium group-hover:text-primary-light transition-colors">
+                aproturaaqp.peru@gmail.com
+              </span>
             </a>
-          </p>
+            <a href="tel:+51951936792" 
+               className="flex items-center gap-3 text-white group">
+              <div className="bg-white/10 p-2 rounded-full group-hover:bg-white/20 transition-colors">
+                <BsTelephone className="text-2xl text-white" />
+              </div>
+              <span className="text-base font-medium group-hover:text-primary-light transition-colors">
+                (+51) 951 936 792
+              </span>
+            </a>
+          </div>
         </div>
       </div>
       <p className="mt-10 text-center text-xs text-white/60">
