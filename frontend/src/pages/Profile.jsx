@@ -24,23 +24,23 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className="bg-brandSand">
+    <div className="bg-slate-50">
       <div className="mx-auto max-w-5xl px-6 py-16">
-        <div className="rounded-3xl bg-white p-10 shadow-2xl">
+        <div className="rounded-3xl bg-white p-10 shadow-xl">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Tu perfil</p>
               <h1 className="mt-2 text-3xl font-semibold text-slate-900">Hola, {user?.name}</h1>
               <p className="mt-2 text-sm text-slate-600">Correo: {user?.email}</p>
               {user?.role === 'admin' && (
-                <p className="mt-3 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                <p className="mt-2 inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                   Rol administrador
                 </p>
               )}
             </div>
             <button
               onClick={logout}
-              className="w-full rounded-full border border-primary/30 px-6 py-3 text-sm font-semibold text-primary transition hover:bg-primary hover:text-white md:w-auto"
+              className="w-full rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-600 transition hover:border-primary hover:text-primary md:w-auto"
             >
               Cerrar sesión
             </button>
@@ -57,7 +57,7 @@ const Profile = () => {
             ) : (
               <ul className="mt-6 space-y-4">
                 {courses.map((course) => (
-                  <li key={course._id || course.id} className="rounded-2xl border border-brandSand/70 bg-white p-4 shadow-sm">
+                  <li key={course._id || course.id} className="rounded-2xl border border-slate-200 p-4">
                     <h3 className="text-lg font-semibold text-slate-900">{course.title}</h3>
                     <p className="mt-1 text-sm text-slate-600">{course.description}</p>
                     {course.type === 'premium' && (

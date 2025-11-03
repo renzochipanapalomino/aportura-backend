@@ -24,22 +24,20 @@ const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
     if (typeof window === 'undefined') return null;
-    const stored = localStorage.getItem('aportura_user') || localStorage.getItem('training_user');
+    const stored = localStorage.getItem('training_user');
     return stored ? JSON.parse(stored) : null;
   });
   const [token, setToken] = useState(() => {
     if (typeof window === 'undefined') return null;
-    return localStorage.getItem('aportura_token') || localStorage.getItem('training_token');
+    return localStorage.getItem('training_token');
   });
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (token) {
-      localStorage.setItem('aportura_token', token);
-      localStorage.removeItem('training_token');
+      localStorage.setItem('training_token', token);
     } else {
-      localStorage.removeItem('aportura_token');
       localStorage.removeItem('training_token');
     }
   }, [token]);
@@ -47,10 +45,8 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (user) {
-      localStorage.setItem('aportura_user', JSON.stringify(user));
-      localStorage.removeItem('training_user');
+      localStorage.setItem('training_user', JSON.stringify(user));
     } else {
-      localStorage.removeItem('aportura_user');
       localStorage.removeItem('training_user');
     }
   }, [user]);
@@ -114,12 +110,6 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     setToken(null);
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('aportura_user');
-      localStorage.removeItem('training_user');
-      localStorage.removeItem('aportura_token');
-      localStorage.removeItem('training_token');
-    }
   };
 
   const value = useMemo(() => ({

@@ -2,13 +2,9 @@ import { Link } from 'react-router-dom';
 
 const CourseCard = ({ course, isPremium = false, onEnroll }) => {
   return (
-    <div className="flex h-full flex-col rounded-2xl border border-brandSand/70 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+    <div className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
       <div className="flex-1">
-        <span
-          className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold ${
-            isPremium ? 'bg-primary/10 text-primary' : 'bg-emerald-100 text-emerald-700'
-          }`}
-        >
+        <span className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold ${isPremium ? 'bg-primary/10 text-primary' : 'bg-emerald-100 text-emerald-700'}`}>
           {isPremium ? 'Premium' : 'Gratis'}
         </span>
         <h3 className="mt-4 text-xl font-semibold text-slate-900">{course.title}</h3>

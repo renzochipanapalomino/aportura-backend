@@ -28,7 +28,7 @@ const CourseDetail = () => {
 
   if (loading) {
     return (
-      <div className="flex min-h-[60vh] items-center justify-center bg-brandSand">
+      <div className="flex min-h-[60vh] items-center justify-center bg-slate-50">
         <p className="text-sm text-slate-500">Cargando curso...</p>
       </div>
     );
@@ -36,7 +36,7 @@ const CourseDetail = () => {
 
   if (error || !course) {
     return (
-      <div className="flex min-h-[60vh] flex-col items-center justify-center bg-brandSand">
+      <div className="flex min-h-[60vh] flex-col items-center justify-center bg-slate-50">
         <p className="text-sm text-red-500">{error}</p>
         <button
           onClick={() => navigate('/cursos')}
@@ -52,9 +52,9 @@ const CourseDetail = () => {
   const canAccess = !isPremiumCourse || (isAuthenticated && hasPremium);
 
   return (
-    <div className="bg-brandSand">
+    <div className="bg-slate-50">
       <div className="mx-auto max-w-4xl px-6 py-16">
-        <div className="rounded-3xl bg-white p-10 shadow-2xl">
+        <div className="rounded-3xl bg-white p-10 shadow-xl">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
@@ -111,9 +111,10 @@ const CourseDetail = () => {
               aprendizaje.
             </p>
             <p>
-              Si tienes dudas o deseas más información sobre los programas premium, contáctanos a{' '}
-              <a href="mailto:programas@aportura.pe" className="font-semibold text-primary">
-                programas@aportura.pe
+              Si tienes dudas o deseas más información sobre los programas premium, contáctanos a
+              {' '}
+              <a href="mailto:academia@formacionintegral.pe" className="font-semibold text-primary">
+                academia@formacionintegral.pe
               </a>
               .
             </p>

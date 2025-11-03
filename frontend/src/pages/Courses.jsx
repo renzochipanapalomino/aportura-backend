@@ -46,12 +46,12 @@ const Courses = () => {
   };
 
   return (
-    <div className="bg-brandSand">
+    <div className="bg-slate-50">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="flex flex-col gap-6 rounded-3xl bg-white/80 p-10 shadow-xl backdrop-blur lg:flex-row lg:items-end lg:justify-between">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Oferta académica</p>
-            <h1 className="mt-3 text-4xl font-bold text-slate-900">Explora los programas de Aportura</h1>
+            <h1 className="mt-3 text-4xl font-bold text-slate-900">Explora nuestros programas de capacitación</h1>
             <p className="mt-4 max-w-2xl text-lg text-slate-600">
               Contenidos diseñados por especialistas para potenciar tus habilidades. Accede libremente a cursos gratuitos y
               desbloquea experiencias premium cuando estés listo.
@@ -59,7 +59,7 @@ const Courses = () => {
           </div>
           <Link
             to="/registro"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary/90"
           >
             Empieza ahora
           </Link>
@@ -105,11 +105,11 @@ const Courses = () => {
           )}
         </section>
 
-        <div className="mt-16 rounded-3xl bg-primary px-8 py-12 text-white shadow-xl">
+        <div className="mt-16 rounded-3xl bg-gradient-to-r from-primary to-primary/80 px-8 py-12 text-white">
           <h3 className="text-2xl font-semibold">¿Quieres subir tus cursos?</h3>
           <p className="mt-3 max-w-3xl text-sm md:text-base">
-            Si formas parte de Aportura y deseas publicar contenido, solicita acceso administrativo para gestionar tus
-            programas desde la plataforma.
+            Si formas parte de nuestra institución y deseas publicar contenido, solicita acceso administrativo para gestionar
+            tus programas desde la plataforma.
           </p>
         </div>
       </div>

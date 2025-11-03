@@ -82,9 +82,9 @@ const Admin = () => {
   };
 
   return (
-    <div className="bg-brandSand">
+    <div className="bg-slate-50">
       <div className="mx-auto max-w-6xl px-6 py-16">
-        <div className="rounded-3xl bg-white p-10 shadow-2xl">
+        <div className="rounded-3xl bg-white p-10 shadow-xl">
           <h1 className="text-3xl font-semibold text-slate-900">Administración de cursos</h1>
           <p className="mt-2 text-sm text-slate-600">
             Crea, edita y elimina cursos disponibles en la plataforma. Recuerda asignar correctamente si es gratuito o premium.
@@ -101,7 +101,7 @@ const Admin = () => {
                 value={form.title}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full rounded-xl border border-brandSand/70 px-4 py-3 text-sm shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               />
             </div>
             <div className="md:col-span-2">
@@ -115,7 +115,7 @@ const Admin = () => {
                 onChange={handleChange}
                 required
                 rows="3"
-                className="mt-2 w-full rounded-xl border border-brandSand/70 px-4 py-3 text-sm shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               />
             </div>
             <div className="md:col-span-2">
@@ -128,7 +128,7 @@ const Admin = () => {
                 value={form.videoUrl}
                 onChange={handleChange}
                 required
-                className="mt-2 w-full rounded-xl border border-brandSand/70 px-4 py-3 text-sm shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               />
             </div>
             <div>
@@ -140,7 +140,7 @@ const Admin = () => {
                 name="type"
                 value={form.type}
                 onChange={handleChange}
-                className="mt-2 w-full rounded-xl border border-brandSand/70 px-4 py-3 text-sm shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+                className="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm shadow-sm focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
               >
                 <option value="free">Gratuito</option>
                 <option value="premium">Premium</option>
@@ -158,7 +158,9 @@ const Admin = () => {
           </form>
 
           {status.message && (
-            <p className={`mt-6 text-sm ${status.type === 'success' ? 'text-emerald-600' : 'text-red-500'}`}>
+            <p
+              className={`mt-6 text-sm ${status.type === 'success' ? 'text-emerald-600' : 'text-red-500'}`}
+            >
               {status.message}
             </p>
           )}
@@ -167,7 +169,7 @@ const Admin = () => {
             <h2 className="text-2xl font-semibold text-slate-900">Cursos publicados</h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               {courses.map((course) => (
-                <div key={course._id || course.id} className="rounded-2xl border border-brandSand/70 bg-white p-6 shadow-sm">
+                <div key={course._id || course.id} className="rounded-2xl border border-slate-200 p-6 shadow-sm">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <h3 className="text-lg font-semibold text-slate-900">{course.title}</h3>
@@ -176,7 +178,7 @@ const Admin = () => {
                         {course.type === 'premium' || course.isPremium ? 'Premium' : 'Gratuito'}
                       </p>
                     </div>
-                    <span className="rounded-full bg-brandSand px-3 py-1 text-xs font-medium text-primary">
+                    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500">
                       {course.type || (course.isPremium ? 'premium' : 'free')}
                     </span>
                   </div>

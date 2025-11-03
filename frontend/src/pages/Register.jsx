@@ -28,13 +28,11 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-brandSand">
+    <div className="bg-slate-50">
       <div className="mx-auto flex min-h-[70vh] max-w-4xl flex-col justify-center px-6 py-16">
-        <div className="rounded-3xl bg-white p-10 shadow-2xl">
-          <h1 className="text-3xl font-semibold text-slate-900">Crea tu cuenta en Aportura</h1>
-          <p className="mt-2 text-sm text-slate-600">
-            Accede a cursos gratuitos, guarda tus favoritos y desbloquea contenidos premium.
-          </p>
+        <div className="rounded-3xl bg-white p-10 shadow-xl">
+          <h1 className="text-3xl font-semibold text-slate-900">Crea tu cuenta</h1>
+          <p className="mt-2 text-sm text-slate-600">Accede a cursos gratuitos y desbloquea contenidos premium.</p>
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
             <div>
               <label className="text-sm font-semibold text-slate-700" htmlFor="name">
@@ -88,16 +86,6 @@ const Register = () => {
               {loading ? 'Procesando...' : 'Registrarme'}
             </button>
           </form>
-          <p className="mt-6 text-center text-sm text-slate-500">
-            ¿Ya tienes cuenta?{' '}
-            <button
-              type="button"
-              onClick={() => navigate('/login')}
-              className="font-semibold text-primary underline-offset-2 hover:underline"
-            >
-              Inicia sesión aquí
-            </button>
-          </p>
         </div>
       </div>
     </div>

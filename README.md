@@ -86,6 +86,6 @@ frontend/
 
 - El control de acceso a cursos premium y rutas administrativas utiliza JWT emitidos por el backend.
 - Para crear usuarios administradores, asegúrate de asignar el rol `admin` desde la base de datos o endpoints existentes.
-- Los endpoints consumidos por el frontend deben existir en el backend (`/api/auth/login`, `/api/auth/register`, `/api/cursos`, `/api/cursos/:id`, `/api/auth/perfil`).
+- Los endpoints consumidos por el frontend deben existir en el backend (`/api/auth/login`, `/api/auth/register`, `/api/courses`, `/api/users/me`).
 
 ¡Listo! Con esto tendrás la plataforma completa de capacitación funcionando en local.
