@@ -8,7 +8,7 @@ const Navbar = () => {
     <header className="border-b border-primary/10 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="text-xl font-bold text-primary">
-          Aportura
+          ASOCIACION DE PROFESIONALES Y TECNICOS DE TURISMO DE AREQUIPA
         </Link>
         <nav className="flex items-center gap-4 text-sm font-medium">
           <NavLink
