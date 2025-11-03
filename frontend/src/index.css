@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans bg-slate-50 text-slate-900;
+  @apply font-sans bg-primary-light text-slate-900;
 }
 
 a {
-  @apply text-primary;
+  @apply text-primary transition-colors;
+}
+
+a:hover {
+  @apply text-primary-dark;
 }
 
 button:disabled {

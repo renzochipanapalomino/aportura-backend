@@ -113,8 +113,8 @@ const CourseDetail = () => {
             <p>
               Si tienes dudas o deseas más información sobre los programas premium, contáctanos a
               {' '}
-              <a href="mailto:academia@formacionintegral.pe" className="font-semibold text-primary">
-                academia@formacionintegral.pe
+              <a href="mailto:academia@aportura.pe" className="font-semibold text-primary">
+                academia@aportura.pe
               </a>
               .
             </p>

@@ -1,6 +1,21 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+const resolveBaseUrl = () => {
+  const envUrl = import.meta.env.VITE_API_URL;
+  if (envUrl && envUrl.trim().length > 0) {
+    return envUrl.replace(/\/$/, '');
+  }
+
+  if (typeof window !== 'undefined') {
+    const { origin, hostname } = window.location;
+    const isLocalhost = ['localhost', '127.0.0.1'].includes(hostname);
+    return isLocalhost ? 'http://localhost:4000' : origin;
+  }
+
+  return 'http://localhost:4000';
+};
+
+const API_BASE_URL = resolveBaseUrl();
 
 export const api = axios.create({
   baseURL: API_BASE_URL,

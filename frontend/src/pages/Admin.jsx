@@ -150,7 +150,7 @@ const Admin = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary/90"
+                className="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark"
               >
                 {loading ? 'Guardando...' : editingId ? 'Actualizar curso' : 'Crear curso'}
               </button>
