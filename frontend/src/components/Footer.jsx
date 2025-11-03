@@ -1,3 +1,8 @@
+import { FaFacebook, FaTiktok } from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
+import { MdEmail } from 'react-icons/md';
+import { BsTelephone } from 'react-icons/bs';
+
 const Footer = () => (
   <footer className="mt-16 bg-primary text-white">
     <div className="mx-auto max-w-6xl px-6 py-12">
@@ -17,9 +22,10 @@ const Footer = () => (
                 href="https://www.facebook.com/aproturaqp/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white hover:text-blue-300 transition-colors underline font-medium"
+                className="text-white hover:text-blue-300 transition-colors flex items-center gap-2 font-medium"
               >
-                Facebook
+                <FaFacebook className="text-xl" />
+                <span className="hover:underline">Facebook</span>
               </a>
             </li>
             <li>
@@ -27,21 +33,36 @@ const Footer = () => (
                 href="https://www.tiktok.com/@aproturaoficial" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-white hover:text-pink-300 transition-colors underline font-medium"
+                className="text-white hover:text-pink-300 transition-colors flex items-center gap-2 font-medium"
               >
-                TikTok
+                <FaTiktok className="text-xl" />
+                <span className="hover:underline">TikTok</span>
               </a>
             </li>
-            <li>Nosotros</li>
+            <li className="flex items-center gap-2">
+              <FaLocationDot className="text-lg" />
+              <span>Nosotros</span>
+            </li>
           </ul>
         </div>
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wide text-white/80">Contacto</h4>
-          <p className="mt-3 text-sm text-white/80">
-            Arequipa,Mariano Melgar - Peru
+          <p className="mt-3 text-sm text-white/80 flex items-center gap-2">
+            <FaLocationDot className="text-lg" />
+            Arequipa, Mariano Melgar - Perú
           </p>
-          <p className="text-sm text-white/80">aproturaaqp.peru@gmail.com</p>
-          <p className="text-sm text-white/80">(+51) 951 936 792</p>
+          <p className="text-sm text-white/80 flex items-center gap-2 mt-2">
+            <MdEmail className="text-lg" />
+            <a href="mailto:aproturaaqp.peru@gmail.com" className="hover:text-white hover:underline">
+              aproturaaqp.peru@gmail.com
+            </a>
+          </p>
+          <p className="text-sm text-white/80 flex items-center gap-2 mt-2">
+            <BsTelephone className="text-lg" />
+            <a href="tel:+51951936792" className="hover:text-white hover:underline">
+              (+51) 951 936 792
+            </a>
+          </p>
         </div>
       </div>
       <p className="mt-10 text-center text-xs text-white/60">
