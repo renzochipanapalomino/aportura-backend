@@ -87,6 +87,17 @@ const Home = () => {
             <p className="mt-4 text-lg text-slate-600">
               Nuestra plataforma digital permite acceder a cursos gratuitos y contenidos exclusivos diseñados por especialistas, facilitando el aprendizaje flexible y la actualización constante.
             </p>
+            <div className="mt-8">
+              <Link
+                to="/sobre-nosotros"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-primary-dark px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_50px_-25px_rgba(123,31,58,0.6)] transition-transform hover:-translate-y-1"
+              >
+                Conoce más sobre APROTURA
+                <span aria-hidden="true" className="text-lg">
+                  →
+                </span>
+              </Link>
+            </div>
           </div>
           <div className="rounded-3xl bg-white p-8 shadow-xl">
             <h3 className="text-xl font-semibold text-slate-900">Beneficios de unirte</h3>

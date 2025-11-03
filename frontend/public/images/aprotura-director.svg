@@ -1,0 +1,23 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7B1F3A" />
+      <stop offset="100%" stop-color="#F6E7EC" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDF2F6" />
+      <stop offset="100%" stop-color="#E3C0CE" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="64" fill="url(#grad)" />
+  <g transform="translate(86 96)">
+    <circle cx="170" cy="120" r="96" fill="white" fill-opacity="0.9" />
+    <path d="M170 24C214.183 24 250 59.8172 250 104C250 148.183 214.183 184 170 184C125.817 184 90 148.183 90 104C90 59.8172 125.817 24 170 24Z" fill="url(#grad2)" />
+    <path d="M170 188C96.7253 188 38 246.725 38 320V332C38 354.091 55.9086 372 78 372H262C284.091 372 302 354.091 302 332V320C302 246.725 243.275 188 170 188Z" fill="white" fill-opacity="0.92" />
+    <path d="M170 200C232.751 200 286 248.249 286 310V328C286 339.046 277.046 348 266 348H74C62.9543 348 54 339.046 54 328V310C54 248.249 107.249 200 170 200Z" fill="#F3D6DE" />
+    <path d="M222 96C222 124.719 198.719 148 170 148C141.281 148 118 124.719 118 96C118 67.2812 141.281 44 170 44C198.719 44 222 67.2812 222 96Z" fill="#7B1F3A" fill-opacity="0.85" />
+  </g>
+  <circle cx="96" cy="88" r="36" fill="white" fill-opacity="0.25" />
+  <circle cx="416" cy="112" r="28" fill="white" fill-opacity="0.2" />
+  <circle cx="440" cy="400" r="40" fill="white" fill-opacity="0.18" />
+</svg>

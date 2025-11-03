@@ -9,6 +9,7 @@ import Login from './pages/Login.jsx';
 import Profile from './pages/Profile.jsx';
 import Admin from './pages/Admin.jsx';
 import CourseDetail from './pages/CourseDetail.jsx';
+import About from './pages/About.jsx';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/sobre-nosotros" element={<About />} />
           <Route path="/cursos" element={<Courses />} />
           <Route path="/cursos/:id" element={<CourseDetail />} />
           <Route path="/registro" element={<Register />} />
