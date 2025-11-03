@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FaFacebook, FaTiktok } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
@@ -39,9 +40,14 @@ const Footer = () => (
                 <span className="hover:underline">TikTok</span>
               </a>
             </li>
-            <li className="flex items-center gap-2">
-              <FaLocationDot className="text-lg" />
-              <span>Nosotros</span>
+            <li>
+              <Link 
+                to="/sobre-nosotros" 
+                className="text-white hover:text-primary-light transition-colors flex items-center gap-2 font-medium"
+              >
+                <FaLocationDot className="text-lg" />
+                <span className="hover:underline">Nosotros</span>
+              </Link>
             </li>
           </ul>
         </div>

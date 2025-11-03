@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebook, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaTiktok } from 'react-icons/fa';
+import { FaLandmark, FaStar, FaHandsHelping, FaLeaf, FaLightbulb, FaGraduationCap, FaMusic, FaCalendarAlt, FaNetworkWired } from 'react-icons/fa';
 
 const values = [
   {
@@ -43,20 +44,20 @@ const historyMilestones = [
   {
     year: 'Programas insignia',
     detail:
-      'Desarrollamos talleres, festivales y presentaciones itinerantes que conectan a la comunidad con su identidad cultural.'
+      'Desarrollamos talleres, festivales y presentaciones que conectan a la comunidad con su identidad cultural.'
   },
   {
     year: 'Presente',
     detail:
-      'Seguimos formando talento y generando experiencias que transforman el turismo en Arequipa, con más actividades por anunciar.'
+      'Seguimos generando experiencias que transforman el turismo en Arequipa.'
   }
 ];
 
 const leadership = [
   {
-    name: 'Nombre del/de la líder (actualiza este dato)',
-    role: 'Fundador(a) y dirección ejecutiva',
-    bio: 'Profesional comprometido con la cultura y el turismo de Arequipa. Comparte aquí una breve semblanza para destacar la trayectoria y motivación de la persona creadora.',
+    name: 'Humberto Michel Chipana Palomino',
+    role: 'Fundador de la asociacion de Profesionales y Técnicos de Turismo de Arequipa',
+    bio: 'Turismo y Hotelería',
     photo: '/images/aprotura-director.svg'
   }
 ];
@@ -114,13 +115,13 @@ const About = () => {
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-6">
             <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-primary-light">
-              Aprotura Arequipa
+              Asociacion de turismo Aprotura Arequipa
             </span>
             <h1 className="text-4xl font-black leading-tight text-white sm:text-5xl">
-              Turismo, cultura y talento para transformar Arequipa
+              Turismo y cultura que transforman la ciudad de Arequipa
             </h1>
             <p className="text-lg text-white/80">
-              Somos APROTURA, la asociación que impulsa experiencias, formación y articulación del turismo arequipeño con un enfoque sostenible y profundamente humano.
+              Somos APROTURA, la asociación que impulsa experiencias y formación en turismo de la ciudad de Arequipa con un enfoque profesional y transformador.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -149,13 +150,13 @@ const About = () => {
                 <div className="rounded-3xl bg-white/10 p-5 shadow-[0_25px_60px_-35px_rgba(255,255,255,0.7)]">
                   <h3 className="text-3xl font-black text-primary-light">Misión</h3>
                   <p className="mt-3 text-sm text-white/75">
-                    Empoderar a profesionales, emprendedores y comunidades mediante capacitación, danza, cultura y turismo responsable.
+                    Empoderar a profesionales, emprendedores y comunidades mediante capacitación, danza, cultura y turismo.
                   </p>
                 </div>
                 <div className="rounded-3xl bg-white/10 p-5 shadow-[0_25px_60px_-35px_rgba(255,255,255,0.7)]">
                   <h3 className="text-3xl font-black text-primary-light">Visión</h3>
                   <p className="mt-3 text-sm text-white/75">
-                    Ser la asociación líder en el sur del Perú para transformar el turismo, fomentando talento, cultura e innovación.
+                    Ser la asociación líder en el sur del Perú para transformar el turismo, promoviendo cultura, profesionalismo y desarrollo regional
                   </p>
                 </div>
               </div>
@@ -171,16 +172,24 @@ const About = () => {
             Nuestros principios orientan cada decisión y aseguran que nuestras iniciativas integren identidad, excelencia y sostenibilidad.
           </p>
           <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-            {values.map((value) => (
-              <article
-                key={value.title}
-                className="group h-full transform rounded-3xl bg-white/80 p-8 shadow-[0_40px_80px_-45px_rgba(15,23,42,0.55)] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_50px_110px_-45px_rgba(123,31,58,0.55)]"
-              >
-                <div className="h-12 w-12 rounded-2xl bg-primary/10 shadow-inner shadow-primary/20 transition group-hover:bg-primary/20" />
-                <h3 className="mt-6 text-xl font-semibold text-slate-900">{value.title}</h3>
-                <p className="mt-3 text-sm text-slate-600">{value.description}</p>
-              </article>
-            ))}
+            {[
+                { icon: FaLandmark, title: values[0].title, description: values[0].description },
+                { icon: FaStar, title: values[1].title, description: values[1].description },
+                { icon: FaHandsHelping, title: values[2].title, description: values[2].description },
+                { icon: FaLeaf, title: values[3].title, description: values[3].description },
+                { icon: FaLightbulb, title: values[4].title, description: values[4].description }
+              ].map(({ icon: Icon, title, description }) => (
+                <article
+                  key={title}
+                  className="group h-full transform rounded-3xl bg-white/80 p-8 shadow-[0_40px_80px_-45px_rgba(15,23,42,0.55)] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_50px_110px_-45px_rgba(123,31,58,0.55)]"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-white shadow-inner shadow-primary/20 transition">
+                    <Icon className="text-2xl" />
+                  </div>
+                  <h3 className="mt-6 text-xl font-semibold text-slate-900">{title}</h3>
+                  <p className="mt-3 text-sm text-slate-600">{description}</p>
+                </article>
+              ))}
           </div>
         </div>
       </section>
@@ -206,7 +215,7 @@ const About = () => {
                 ))}
               </div>
               <p className="mt-6 text-xs text-white/60">
-                * Actualiza este espacio con el año exacto de fundación y la cantidad de años de experiencia cuando tengas el dato.
+                Fundada en el año 2021, la Asociación Peruana de Turismo – APROTURA cuenta con más de 4 años de experiencia impulsando el turismo y la cultura en la ciudad de Arequipa
               </p>
             </div>
             <div className="space-y-8">
@@ -234,7 +243,7 @@ const About = () => {
                       <p className="text-sm font-medium uppercase tracking-wide text-slate-500">{leader.role}</p>
                       <p className="text-base leading-relaxed text-slate-700">{leader.bio}</p>
                       <p className="text-xs text-slate-500">
-                        Reemplaza la información con los datos reales del equipo directivo y agrega más tarjetas si lo deseas.
+                         los datos reales del equipo directivo 
                       </p>
                     </div>
                   </div>
@@ -254,14 +263,21 @@ const About = () => {
                 Diseñamos experiencias de aprendizaje y difusión cultural que elevan la competitividad del turismo en Arequipa.
               </p>
               <div className="mt-10 grid gap-6 sm:grid-cols-2">
-                {programs.map((program) => (
+                {[
+                  { icon: FaGraduationCap, title: programs[0].title, description: programs[0].description },
+                  { icon: FaMusic, title: programs[1].title, description: programs[1].description },
+                  { icon: FaCalendarAlt, title: programs[2].title, description: programs[2].description },
+                  { icon: FaNetworkWired, title: programs[3].title, description: programs[3].description }
+                ].map(({ icon: Icon, title, description }) => (
                   <div
-                    key={program.title}
+                    key={title}
                     className="group rounded-3xl border border-white/10 bg-white/5 p-6 shadow-[0_25px_60px_-40px_rgba(0,0,0,0.6)] transition duration-300 hover:-translate-y-2 hover:border-primary-light/60"
                   >
-                    <div className="h-11 w-11 rounded-2xl bg-primary/30 shadow-inner shadow-primary/40 transition group-hover:bg-primary/50" />
-                    <h3 className="mt-5 text-xl font-semibold text-white">{program.title}</h3>
-                    <p className="mt-3 text-sm text-white/75">{program.description}</p>
+                    <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary text-white shadow-inner shadow-primary/40 transition group-hover:bg-primary-light">
+                      <Icon className="text-xl" />
+                    </div>
+                    <h3 className="mt-5 text-xl font-semibold text-white">{title}</h3>
+                    <p className="mt-3 text-sm text-white/75">{description}</p>
                   </div>
                 ))}
               </div>
@@ -280,7 +296,7 @@ const About = () => {
                 ))}
               </div>
               <p className="mt-6 text-xs text-white/60">
-                Añade testimonios, estadísticas precisas o reconocimientos cuando estén disponibles.
+                Asociacion de Profesionales y Técnicos de Turismo de Arequipa.
               </p>
             </div>
           </div>
@@ -291,7 +307,7 @@ const About = () => {
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900">Cómo involucrarte</h2>
+              <h2 className="text-3xl font-bold text-slate-900">Cómo pertenecer a la Asociacion de turismo Aprotura</h2>
               <p className="mt-4 text-base text-slate-600">
                 Sé parte del turismo que transforma Arequipa siguiendo cualquiera de estas acciones.
               </p>
@@ -323,15 +339,15 @@ const About = () => {
               <div className="mt-8 space-y-6 text-sm text-slate-600">
                 <div className="flex items-center gap-4">
                   <FaMapMarkerAlt className="text-primary" />
-                  <span>Dirección: Actualiza aquí la ubicación de APROTURA.</span>
+                  <span>Dirección: Arequipa, Mariano Melgar - Peru</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <FaWhatsapp className="text-primary" />
-                  <span>Teléfono / WhatsApp: (+51) 000 000 000 (sustituye por tu número).</span>
+                  <span>Teléfono / WhatsApp: (+51) 951 936 792</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <FaEnvelope className="text-primary" />
-                  <span>Correo electrónico: contacto@aprotura.pe (cámbialo por tu correo oficial).</span>
+                  <span>Correo electrónico: aproturaaqp.peru@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <FaFacebook className="text-primary" />
@@ -344,9 +360,20 @@ const About = () => {
                     facebook.com/aproturaqp
                   </a>
                 </div>
+                <div className="flex items-center gap-4">
+                  <FaTiktok className="text-primary" />
+                  <a
+                    href="https://www.tiktok.com/@aproturaoficial"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-primary hover:underline"
+                  >
+                    @aproturaoficial
+                  </a>
+                </div>
               </div>
               <p className="mt-6 text-xs text-slate-500">
-                Añade más redes sociales como Instagram o TikTok en esta sección cuando tengas los enlaces confirmados.
+                Síguenos en nuestras redes sociales para estar al tanto de nuestros eventos y actividades.
               </p>
             </div>
           </div>
