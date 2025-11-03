@@ -99,7 +99,7 @@ const Home = () => {
                 <span className="mt-1 h-2 w-2 rounded-full bg-primary" />
                 Biblioteca de recursos descargables y grabaciones.
               </li>
-              <li classconfigurable="flex items-start gap-3">
+              <li className="flex items-start gap-3">
                 <span className="mt-1 h-2 w-2 rounded-full bg-primary" />
                 Eventos presenciales y virtuales exclusivos para miembros de APROTURA.
               </li>
@@ -111,7 +111,7 @@ const Home = () => {
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-3xl font-bold text-slate-900">Danza y Eventos</h2>
+            <h2 className="text-3xl font-bold text-slate-900">Noticias y Eventos</h2>
             <Link to="/cursos" className="text-sm font-semibold text-primary">
               Explorar cursos
             </Link>

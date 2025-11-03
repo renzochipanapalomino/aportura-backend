@@ -7,14 +7,25 @@ const Navbar = () => {
   return (
     <header className="border-b border-primary/10 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="text-xl font-bold text-primary">
-          ASOCIACION DE PROFESIONALES Y TECNICOS DE TURISMO DE AREQUIPA
+        <Link to="/" className="flex items-center gap-3">
+          <img 
+            src="/images/aprotura-logo.jpg"
+            alt="Logo Aprotura"
+            className="h-12 w-auto rounded-lg object-contain"
+          />
+          <span className="text-xl font-bold text-primary hidden lg:block">
+            ASOCIACION APROTURA DE AREQUIPA
+          </span>
         </Link>
         <nav className="flex items-center gap-4 text-sm font-medium">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `transition hover:text-primary ${isActive ? 'text-primary' : 'text-slate-600'}`
+              `px-4 py-2 rounded-lg transition-all ${
+                isActive 
+                  ? 'bg-primary text-white shadow-lg shadow-primary/30' 
+                  : 'bg-white text-slate-600 hover:bg-primary/10 hover:text-primary border border-slate-200'
+              }`
             }
           >
             Inicio
@@ -22,7 +33,11 @@ const Navbar = () => {
           <NavLink
             to="/cursos"
             className={({ isActive }) =>
-              `transition hover:text-primary ${isActive ? 'text-primary' : 'text-slate-600'}`
+              `px-4 py-2 rounded-lg transition-all ${
+                isActive 
+                  ? 'bg-primary text-white shadow-lg shadow-primary/30' 
+                  : 'bg-white text-slate-600 hover:bg-primary/10 hover:text-primary border border-slate-200'
+              }`
             }
           >
             Cursos

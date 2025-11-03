@@ -3,7 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import pkg from "pg";
 import authRoutes from "./routes/authRoutes.js";
-import cursosRoutes from "./routes/cursosRoutes.js"; // ✅ Nueva importación
+import cursosRoutes from "./routes/cursosRoutes.js"; // Nueva importación
 
 const { Pool } = pkg;
 
@@ -28,11 +28,11 @@ export const pool = new Pool({
 // Probar conexión inmediata al iniciar
 pool.connect()
   .then(() => console.log("🟢 Conectado correctamente a PostgreSQL"))
-  .catch(err => console.error("🔴 Error al conectar con PostgreSQL:", err));
+  .catch(err => console.error("Error al conectar con PostgreSQL:", err));
 
 // ✅ Rutas del sistema
 app.use("/api/auth", authRoutes);
-app.use("/api/cursos", cursosRoutes); // ✅ Añadido para manejar los cursos
+app.use("/api/cursos", cursosRoutes); // Añadido para manejar los cursos
 
 // Ruta base de prueba
 app.get("/", async (req, res) => {
