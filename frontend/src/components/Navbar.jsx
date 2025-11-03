@@ -5,10 +5,10 @@ const Navbar = () => {
   const { isAuthenticated, user, logout, isAdmin } = useAuth();
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className="border-b border-primary/10 bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link to="/" className="text-xl font-bold text-primary">
-          Formación Integral
+          Aportura
         </Link>
         <nav className="flex items-center gap-4 text-sm font-medium">
           <NavLink
@@ -59,7 +59,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/registro"
-                className="rounded-full bg-primary px-4 py-2 text-white transition hover:bg-primary/90"
+                className="rounded-full bg-primary px-4 py-2 text-white transition hover:bg-primary-dark"
               >
                 Regístrate
               </Link>

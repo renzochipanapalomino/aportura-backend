@@ -13,7 +13,7 @@ const CourseCard = ({ course, isPremium = false, onEnroll }) => {
       <div className="mt-6 flex items-center gap-3">
         <Link
           to={`/cursos/${course._id || course.id}`}
-          className="flex-1 rounded-full bg-primary px-4 py-2 text-center text-sm font-semibold text-white transition hover:bg-primary/90"
+          className="flex-1 rounded-full bg-primary px-4 py-2 text-center text-sm font-semibold text-white transition hover:bg-primary-dark"
         >
           Ver más
         </Link>

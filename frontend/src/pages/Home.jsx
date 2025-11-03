@@ -24,30 +24,30 @@ const galleryItems = [
 const Home = () => {
   return (
     <div>
-      <section className="relative overflow-hidden bg-slate-900">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(0,102,255,0.45),_transparent_60%)]" />
+      <section className="relative overflow-hidden bg-primary">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.25),_transparent_65%)]" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6 py-24 lg:flex-row lg:items-center">
           <div className="w-full lg:w-1/2">
-            <span className="text-sm font-semibold uppercase tracking-[0.3em] text-primary/80">
-              Plataforma de capacitación
+            <span className="text-sm font-semibold uppercase tracking-[0.3em] text-white/70">
+              Plataforma de capacitación de Aportura
             </span>
             <h1 className="mt-4 text-4xl font-extrabold text-white sm:text-5xl">
               Crece con programas exclusivos de formación profesional y artística
             </h1>
-            <p className="mt-6 text-lg text-slate-200">
+            <p className="mt-6 text-lg text-white/80">
               Conecta con expertos en distintas disciplinas, accede a cursos gratuitos y desbloquea contenidos premium para
               impulsar tu talento.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 to="/cursos"
-                className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary/90"
+                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-primary transition hover:bg-primary-light"
               >
                 Ver cursos
               </Link>
               <Link
                 to="/registro"
-                className="rounded-full border border-slate-400 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-primary hover:text-white"
+                className="rounded-full border border-white/60 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-primary-dark"
               >
                 Únete a la comunidad
               </Link>
@@ -58,7 +58,7 @@ const Home = () => {
               {galleryItems.map((item) => (
                 <figure
                   key={item.id}
-                  className="group relative overflow-hidden rounded-3xl border border-slate-800/50 bg-slate-800/60 shadow-lg"
+                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/10 shadow-lg backdrop-blur-sm"
                 >
                   <img
                     src={item.image}

@@ -28,7 +28,7 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-slate-50">
+    <div className="bg-primary-light">
       <div className="mx-auto flex min-h-[70vh] max-w-4xl flex-col justify-center px-6 py-16">
         <div className="rounded-3xl bg-white p-10 shadow-xl">
           <h1 className="text-3xl font-semibold text-slate-900">Crea tu cuenta</h1>
@@ -81,7 +81,7 @@ const Register = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary/90"
+              className="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark"
             >
               {loading ? 'Procesando...' : 'Registrarme'}
             </button>
