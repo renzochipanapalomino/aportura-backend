@@ -4,22 +4,19 @@ const galleryItems = [
   {
     id: 1,
     title: 'Música y Danza de nuestra provincia y departamento de Arequipa',
-    image:
-      'https://scontent.ftcq3-1.fna.fbcdn.net/v/t39.30808-6/571290624_1107105121411758_8748723166794922654_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEmnM2YWy46bIsNnSe4R7OBayxfgYDlHNBrLF-BgOUc0MQGBAncwToTwgELBC8DgLEsg7KfiZjg9UzdPgQCD-h7&_nc_ohc=Y1MTKszardcQ7kNvwGXdOrL&_nc_oc=AdkviBqtF1W3Kp2WQyKAcTeTQA41L2HrQ017RaTZtY6kvbEdSqXxOCNiZevih_N4_RA&_nc_zt=23&_nc_ht=scontent.ftcq3-1.fna&_nc_gid=Gwrhcjp3fKriVzIVOlAJQQ&oh=00_AfikXCpI0I1NHg-0MWRxWeEdCaNqqUqzsvKbFs0Ab2Fmfg&oe=690EE1C6',
+    image: '/images/gallery/danza-musica.jpg',
     description: 'Talleres y presentaciones que conectan el talento local con el turismo regional.'
   },
   {
     id: 2,
     title: 'Cultura de nuestra provincia y departamento de Arequipa',
-    image:
-      'https://scontent.ftcq3-1.fna.fbcdn.net/v/t39.30808-6/469226981_1090504122456312_7530932388672681400_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE9cMTCBaxI_AZYOSJ94yI4xmr3ug6kflDGave6DqR-ULbvgbHlYv-KSKRUYSOU_ioyHRfx1dp0ikxxfQEPOeZQ&_nc_ohc=wmbPjgl-1yAQ7kNvwFCqWHh&_nc_oc=AdmXpBVizukn2uDRiY-T-7jZ19mP4QHXlPLOBu-2eyzAixGLBPrP4aB_KMKmnS4A&_nc_zt=23&_nc_ht=scontent.ftcq3-1.fna&_nc_gid=wHTAI6WAYyg_Q9Mr8ENC2g&oh=00_AfhhtG2W-cVoXypJ7Dy-FjTC0lyrCE1jlfJ94bZT2AqBEQ&oe=690EE779',
+    image: '/images/gallery/cultura.jpg',
     description: 'Actividades que destacan nuestra identidad regional y fortalecen tu perfil profesional en turismo.'
   },
   {
     id: 3,
     title: 'Eventos de nuestra provincia y departamento de Arequipa',
-    image:
-      'https://scontent.ftcq3-1.fna.fbcdn.net/v/t39.30808-6/469399789_1090503842456340_686464472171251050_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHx-5c_n8igwh-_tpwXSW68k9LON6qHfbST0s43qod9tAV4fh9difu_AAZ3pwM8sWuExbZV0UOXwOS2Vn-Gmj-a&_nc_ohc=7AFIJva6qEUQ7kNvwEjOJMm&_nc_oc=AdnhHsDoHg0O0sr9hALn8tPwR7IGWKnSg3Ay8kGvjKKlGtBN0ONpXJlDw_-YYy4tKHo&_nc_zt=23&_nc_ht=scontent.ftcq3-1.fna&_nc_gid=CBuB7s88mG-fQ3p8pRboCg&oh=00_AfiyBTRZtY5mSzkyEkSJMq1-A4TLqrw0oZCTkYW2rxfCtw&oe=690EC314',
+    image: '/images/gallery/eventos.jpg',
     description: 'Festivales, encuentros y experiencias diseñadas para impulsar el turismo local y tu crecimiento profesional.'
   }
 ];
